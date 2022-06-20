@@ -1,16 +1,10 @@
 import {AppRouter} from "@/backend/router";
 import {withTRPC} from "@trpc/next";
-import {NextComponentType} from "next/dist/shared/lib/utils";
 import "../styles/global.css";
 import superjson from "superjson";
+import type {AppProps} from "next/app";
 
-function MyApp({
-  Component,
-  pageProps,
-}: {
-  Component: NextComponentType;
-  pageProps: any;
-}) {
+function MyApp({Component, pageProps}: AppProps) {
   return <Component {...pageProps} />;
 }
 
